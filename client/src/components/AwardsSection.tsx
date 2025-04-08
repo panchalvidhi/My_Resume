@@ -1,6 +1,9 @@
 import { useRef, useEffect } from "react";
 
 
+
+
+
 export default function AwardsSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
