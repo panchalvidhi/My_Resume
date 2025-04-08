@@ -36,35 +36,35 @@ export default function ProjectsSection() {
   const [projects] = useState<Project[]>([
     {
       id: 1,
-      title: "DashDynamo",
-      description: "A powerful and customizable dashboard solution for real-time analytics and business intelligence. Features include drag-and-drop interface, dynamic data visualization, and real-time updates.",
-      techs: ["React", "Node.js", "MongoDB", "Socket.io", "Chart.js"],
-      link: "https://github.com/VRP-21/DashDynamo",
-      image: "https://placehold.co/300x200/001845/ffffff?text=DashDynamo"
+      title: "Fake News Buster - Innodel Technologies",
+      description: "Managed requirement gathering, assigned tasks to developers, and ensured proper implementation through testing, and refining system functionalities through market research and business process analysis.",
+      techs: ["Requirement Analysis", "Project Management", "QA Testing", "Market Research"],
+      link: "https://innodel.com",
+      image: "https://placehold.co/300x200/001845/ffffff?text=Fake+News+Buster"
     },
     {
       id: 2,
-      title: "ShopSphere",
-      description: "A comprehensive e-commerce platform with user authentication, product catalog, cart functionality, payment processing, and order management system.",
-      techs: ["React", "Express.js", "MongoDB", "Redux", "Stripe API"],
-      link: "https://github.com/VRP-21/ShopSphere",
-      image: "https://placehold.co/300x200/570861/ffffff?text=ShopSphere"
+      title: "Formzi - Innodel Technologies",
+      description: "Improved UI/UX strategy for a form management system, enhancing accessibility and usability. Analyzed workflows and collaborated with designers to implement changes.",
+      techs: ["UI/UX Design", "Accessibility", "Usability Testing", "Workflow Analysis"],
+      link: "https://innodel.com",
+      image: "https://placehold.co/300x200/570861/ffffff?text=Formzi"
     },
     {
       id: 3,
-      title: "HealthHub",
-      description: "A healthcare management system that enables patients to book appointments, consult with doctors virtually, access medical records, and receive medication reminders.",
-      techs: ["React Native", "Firebase", "Redux", "Express.js", "WebRTC"],
-      link: "https://github.com/VRP-21/HealthHub",
-      image: "https://placehold.co/300x200/0a5700/ffffff?text=HealthHub"
+      title: "ERPZi - Pacific Placing & Finishing - Innodel Technologies",
+      description: "Gathered business requirements and optimized ERP workflows for project tracking and resource management. Conducted UAT testing and provided feedback for process improvements.",
+      techs: ["ERP", "Business Analysis", "UAT Testing", "Resource Management"],
+      link: "https://innodel.com",
+      image: "https://placehold.co/300x200/0a5700/ffffff?text=ERPZi"
     },
     {
       id: 4,
-      title: "CodeCollab",
-      description: "A collaborative code editor with real-time syntax highlighting, version control integration, and video chat capabilities for remote pair programming sessions.",
-      techs: ["Next.js", "WebSocket", "Monaco Editor", "Git API", "WebRTC"],
-      link: "https://github.com/VRP-21/CodeCollab",
-      image: "https://placehold.co/300x200/00094d/ffffff?text=CodeCollab"
+      title: "Aquarius Salon in Cloud - Samcom Technobrains",
+      description: "Worked as a React.js developer on a cloud-based salon management project, handling appointments, products, and operations. Implemented REST APIs and enhanced functionality.",
+      techs: ["React.js", "REST API", "Cloud Services", "Salon Management"],
+      link: "https://samcomtechnobrains.com",
+      image: "https://placehold.co/300x200/00094d/ffffff?text=Aquarius+Salon"
     }
   ]);
   
