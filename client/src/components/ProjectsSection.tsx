@@ -39,7 +39,7 @@ export default function ProjectsSection() {
       title: "Fake News Buster - Innodel Technologies",
       description: "Managed requirement gathering, assigned tasks to developers, and ensured proper implementation through testing, and refining system functionalities through market research and business process analysis.",
       techs: ["Requirement Analysis", "Project Management", "QA Testing", "Market Research"],
-      link: "https://innodel.com",
+      link: "http://fnb.innodel.com:3001",
       image: "https://placehold.co/300x200/001845/ffffff?text=Fake+News+Buster"
     },
     {
@@ -47,7 +47,7 @@ export default function ProjectsSection() {
       title: "Formzi - Innodel Technologies",
       description: "Improved UI/UX strategy for a form management system, enhancing accessibility and usability. Analyzed workflows and collaborated with designers to implement changes.",
       techs: ["UI/UX Design", "Accessibility", "Usability Testing", "Workflow Analysis"],
-      link: "https://innodel.com",
+      link: "https://formzi.com/",
       image: "https://placehold.co/300x200/570861/ffffff?text=Formzi"
     },
     {
@@ -55,7 +55,7 @@ export default function ProjectsSection() {
       title: "ERPZi - Pacific Placing & Finishing - Innodel Technologies",
       description: "Gathered business requirements and optimized ERP workflows for project tracking and resource management. Conducted UAT testing and provided feedback for process improvements.",
       techs: ["ERP", "Business Analysis", "UAT Testing", "Resource Management"],
-      link: "https://innodel.com",
+      link: "https://ppf.host-app.ca/account/login",
       image: "https://placehold.co/300x200/0a5700/ffffff?text=ERPZi"
     },
     {
@@ -63,7 +63,7 @@ export default function ProjectsSection() {
       title: "Aquarius Salon in Cloud - Samcom Technobrains",
       description: "Worked as a React.js developer on a cloud-based salon management project, handling appointments, products, and operations. Implemented REST APIs and enhanced functionality.",
       techs: ["React.js", "REST API", "Cloud Services", "Salon Management"],
-      link: "https://samcomtechnobrains.com",
+      link: "https://my.salonincloud.com/login",
       image: "https://placehold.co/300x200/00094d/ffffff?text=Aquarius+Salon"
     },
     {
@@ -71,7 +71,7 @@ export default function ProjectsSection() {
       title: "Aquarius BTPilot - Samcom Technobrains",
       description: "Worked as a React.js developer on a cloud-based salon backend project, implementing REST APIs and improving functionality. Worked with class components, handled complex calculations, and resolved multiple bugs to enhance system performance.",
       techs: ["React.js", "REST API", "Debugging", "Class Components"],
-      link: "https://samcomtechnobrains.com",
+      link: "https://www.btpilot.it/login",
       image: "https://placehold.co/300x200/2a0080/ffffff?text=BTPilot"
     },
     {
@@ -79,7 +79,7 @@ export default function ProjectsSection() {
       title: "PSHM - Project Sales HR Management - Samcom Technobrains",
       description: "Worked as a React.js developer on an in-house HR and sales management project. Developed and improved various modules, integrated REST APIs, and built a responsive frontend to streamline operations and enhance user experience.",
       techs: ["React.js", "HR Management", "Sales Management", "Responsive Design"],
-      link: "https://samcomtechnobrains.com",
+      link: "https://www.samcomtechnobrains.com/PSHM/",
       image: "https://placehold.co/300x200/800042/ffffff?text=PSHM"
     },
     {
@@ -87,7 +87,7 @@ export default function ProjectsSection() {
       title: "Staff Care - Vayak Private Ltd",
       description: "Worked on a field staff tracking app for a product-based company. Assisted in requirement gathering, client training, and business reporting. Coordinated with the development team to implement changes as per client needs.",
       techs: ["Staff Tracking", "Client Training", "Requirement Analysis", "Business Reporting"],
-      link: "https://vayakservices.com",
+      link: "https://www.staffcare.in/",
       image: "https://placehold.co/300x200/405000/ffffff?text=Staff+Care"
     }
   ]);

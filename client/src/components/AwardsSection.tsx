@@ -67,7 +67,7 @@ export default function AwardsSection() {
               <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative aspect-square w-full max-w-[300px] overflow-hidden rounded-lg">
                 <img 
-                  src="/award-trophy.svg" 
+                  src="https://placehold.co/300x300/FFD700/000000?text=🏆+Award+Trophy" 
                   alt="Employee of the Year Trophy" 
                   className="w-full h-full object-contain"
                 />

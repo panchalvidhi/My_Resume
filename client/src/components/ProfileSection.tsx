@@ -52,7 +52,7 @@ export default function ProfileSection() {
             Proficient in optimizing outcomes through strategic planning, process improvement, and Agile Methodologies.
             Demonstrated success in leading cross-functional teams, driving customer satisfaction, and delivering customized
             solutions. Committed to leveraging technical expertise and leadership capabilities to achieve organizational excellence
-            and impactful results.
+            and impactful results. Currently seeking full-time position in Project Coordinator roles.
           </p>
           <div className="flex flex-wrap gap-3">
             <a 

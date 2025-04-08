@@ -7,6 +7,7 @@ interface Certificate {
   date: string;
   credentialUrl?: string;
   skills: string[];
+  image?: string;
 }
 
 export default function CertificatesSection() {
@@ -36,111 +37,91 @@ export default function CertificatesSection() {
   const [certificates] = useState<Certificate[]>([
     {
       id: 1,
-      title: "Frontend Development Libraries",
-      organization: "FreeCodeCamp",
-      date: "December 2023",
-      credentialUrl: "https://www.freecodecamp.org/certification/vidhi/front-end-development-libraries",
-      skills: ["React", "Redux", "Bootstrap", "jQuery", "SASS"]
-    },
-    {
-      id: 2,
-      title: "Javascript (Intermediate)",
-      organization: "HackerRank",
-      date: "August 2023",
-      credentialUrl: "https://www.hackerrank.com/certificates/96b2b42064ee",
-      skills: ["JavaScript", "ES6", "Promise", "Async/Await", "DOM Manipulation"]
-    },
-    {
-      id: 3,
-      title: "Node Basics",
-      organization: "HackerRank",
-      date: "January 2023",
-      credentialUrl: "https://www.hackerrank.com/certificates/ef0fbcb53e3e",
-      skills: ["Node.js", "Express", "REST API", "Middleware"]
-    },
-    {
-      id: 4,
       title: "The Fundamentals of Digital Marketing",
       organization: "Google Digital Garage",
       date: "February 2024",
-      skills: ["Digital Marketing", "SEO", "Analytics", "Content Strategy", "Social Media"]
+      skills: ["Digital Marketing", "SEO", "Analytics", "Content Strategy", "Social Media"],
+      image: "https://placehold.co/300x200/303030/ffffff?text=Digital+Marketing"
     },
     {
-      id: 5,
+      id: 2,
       title: "Agile Scrum Master",
       organization: "Simplilearn",
       date: "November 2023",
-      skills: ["Agile Methodology", "Scrum", "Sprint Planning", "Retrospectives"]
+      skills: ["Agile Methodology", "Scrum", "Sprint Planning", "Retrospectives"],
+      image: "https://placehold.co/300x200/303030/ffffff?text=Agile+Scrum"
     },
     {
-      id: 6,
+      id: 3,
       title: "Automation Framework Development using Selenium",
       organization: "Unicode Technologies HR",
       date: "November 2023",
-      skills: ["Selenium", "Test Automation", "Java", "TestNG", "Framework Design"]
+      skills: ["Selenium", "Test Automation", "Java", "TestNG", "Framework Design"],
+      image: "https://placehold.co/300x200/303030/ffffff?text=Automation+Framework"
     },
     {
-      id: 7,
+      id: 4,
       title: "Human Resource Management",
       organization: "Great Learning",
       date: "December 2023",
-      skills: ["HR Management", "Talent Acquisition", "Employee Relations", "Performance Management"]
+      skills: ["HR Management", "Talent Acquisition", "Employee Relations", "Performance Management"],
+      image: "https://placehold.co/300x200/303030/ffffff?text=HR+Management"
     },
     {
-      id: 8,
+      id: 5,
       title: "Introduction to Amazon Elastic Compute Cloud (EC2)",
       organization: "AWS Training Online",
       date: "December 2023",
-      skills: ["AWS", "EC2", "Cloud Computing", "Instance Management", "Scaling"]
+      skills: ["AWS", "EC2", "Cloud Computing", "Instance Management", "Scaling"],
+      image: "https://placehold.co/300x200/303030/ffffff?text=AWS+EC2"
     },
     {
-      id: 9,
+      id: 6,
       title: "Manual and Automation Testing",
       organization: "Unicode Technologies HR",
       date: "November 2023",
-      skills: ["Manual Testing", "Test Cases", "Automation Testing", "QA"]
+      skills: ["Manual Testing", "Test Cases", "Automation Testing", "QA"],
+      image: "https://placehold.co/300x200/303030/ffffff?text=Testing"
     },
     {
-      id: 10,
+      id: 7,
       title: "Operating System",
       organization: "NPTEL",
       date: "January 2024",
-      skills: ["OS Concepts", "Process Management", "Memory Management", "File Systems"]
+      skills: ["OS Concepts", "Process Management", "Memory Management", "File Systems"],
+      image: "https://placehold.co/300x200/303030/ffffff?text=Operating+System"
     },
     {
-      id: 11,
+      id: 8,
       title: "Programming in Java",
       organization: "NPTEL",
       date: "January 2024",
-      skills: ["Java", "OOP", "Data Structures", "Collections", "Multithreading"]
+      skills: ["Java", "OOP", "Data Structures", "Collections", "Multithreading"],
+      image: "https://placehold.co/300x200/303030/ffffff?text=Java+Programming"
     },
     {
-      id: 12,
+      id: 9,
       title: "Environmental Engineering and Artificial Intelligence",
       organization: "Udemy Free Courses",
       date: "November 2023",
-      skills: ["Environmental Engineering", "AI Applications", "Sustainability"]
+      skills: ["Environmental Engineering", "AI Applications", "Sustainability"],
+      image: "https://placehold.co/300x200/303030/ffffff?text=Environmental+Engineering"
     },
     {
-      id: 13,
+      id: 10,
       title: "Elementary Drawing Grade Examination",
       organization: "State Examination Board Gujarat",
       date: "December 2023",
-      skills: ["Drawing Fundamentals", "Sketching", "Art Techniques"]
+      skills: ["Drawing Fundamentals", "Sketching", "Art Techniques"],
+      image: "https://placehold.co/300x200/303030/ffffff?text=Elementary+Drawing"
     },
     {
-      id: 14,
+      id: 11,
       title: "Intermediate Drawing Grade Examination",
       organization: "State Examination Board Gujarat",
       date: "December 2023",
-      skills: ["Advanced Drawing", "Composition", "Visual Arts"]
-    },
-    {
-      id: 15,
-      title: "Web Development with HTML, CSS, JavaScript",
-      organization: "Udemy",
-      date: "October 2022",
-      skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design"]
+      skills: ["Advanced Drawing", "Composition", "Visual Arts"],
+      image: "https://placehold.co/300x200/303030/ffffff?text=Intermediate+Drawing"
     }
   ]);
 
@@ -159,17 +140,34 @@ export default function CertificatesSection() {
         {certificates.map((cert) => (
           <div 
             key={cert.id} 
-            className="certificate-card bg-gradient-to-br from-slate-800 to-slate-900 p-4 rounded-lg shadow-lg border border-purple-400/30 hover:border-purple-400/70 transition-all duration-300 transform hover:-translate-y-1"
+            className="certificate-card bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden rounded-lg shadow-lg border border-purple-400/30 hover:border-purple-400/70 transition-all duration-300 transform hover:-translate-y-1"
           >
-            <div className="flex flex-col h-full">
-              <div className="mb-2">
-                <div className="flex flex-col">
+            {cert.image && (
+              <div className="h-40 overflow-hidden relative">
+                <img 
+                  src={cert.image} 
+                  alt={`${cert.title} certificate`} 
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 w-full p-3">
+                  <h3 className="text-base font-semibold text-white drop-shadow-lg">{cert.title}</h3>
+                </div>
+              </div>
+            )}
+            
+            <div className="p-4 flex flex-col h-full">
+              {!cert.image && (
+                <div className="mb-2">
                   <div className="flex justify-between items-start mb-1">
                     <h3 className="text-base font-semibold text-white">{cert.title}</h3>
-                    <span className="text-xs px-2 py-0.5 rounded bg-purple-500/20 text-purple-200 font-medium ml-1 whitespace-nowrap">{cert.date}</span>
                   </div>
-                  <p className="text-purple-300 font-medium text-sm">{cert.organization}</p>
                 </div>
+              )}
+              
+              <div className="flex justify-between items-center mb-3">
+                <p className="text-purple-300 font-medium text-sm">{cert.organization}</p>
+                <span className="text-xs px-2 py-0.5 rounded bg-purple-500/20 text-purple-200 font-medium ml-1 whitespace-nowrap">{cert.date}</span>
               </div>
               
               <div className="flex flex-wrap gap-1 mt-2 mb-3">
