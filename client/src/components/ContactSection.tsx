@@ -74,7 +74,7 @@ export default function ContactSection() {
             <div className="space-y-4">
               <div className="p-4 bg-indigo-800/50 rounded-lg border border-indigo-700/30">
                 <h4 className="text-indigo-300 font-medium mb-2">Available for Full-time Opportunities</h4>
-                <p className="text-white/90">Currently seeking full-time positions in frontend development and UX/UI design roles.</p>
+                <p className="text-white/90">Currently seeking full-time position in Project Coordinator roles.</p>
               </div>
               
               <div className="p-4 bg-indigo-800/50 rounded-lg border border-indigo-700/30">
