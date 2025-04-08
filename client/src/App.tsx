@@ -8,7 +8,7 @@ import AwardsSection from "./components/AwardsSection";
 import CertificatesSection from "./components/CertificatesSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
+
 import useClickAnimation from "./hooks/useClickAnimation";
 
 // Import animations CSS
@@ -60,7 +60,7 @@ function App() {
         <CertificatesSection />
         <ContactSection />
       </main>
-      <Footer />
+
     </>
   );
 }
