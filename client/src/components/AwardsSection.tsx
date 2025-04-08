@@ -60,7 +60,7 @@ export default function AwardsSection() {
               </h3>
               <p className="text-gray-300 flex items-center">
                 <img
-                  src="/trophy-img.png"
+                  src="https://cdn-icons-png.flaticon.com/512/3176/3176278.png"
                   alt="Award Trophy"
                   className="w-6 h-6 mr-2"
                 />
@@ -95,7 +95,7 @@ export default function AwardsSection() {
               <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative aspect-square w-full max-w-[300px] overflow-hidden rounded-lg">
                 <img
-                  src="/trophy-img.png"
+                  src="https://cdn-icons-png.flaticon.com/512/3176/3176278.png"
                   alt="Employee of the Year Trophy - Vidhi Panchal"
                   className="w-full h-full object-contain"
                   style={{ maxHeight: "300px" }}
