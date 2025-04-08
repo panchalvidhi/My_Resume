@@ -17,8 +17,8 @@ import "./styles/animations.css";
 function App() {
   // Use the click animation hook with custom options
   useClickAnimation({
-    size: 100,
-    color: 'rgba(99, 102, 241, 0.4)', // Using primary color from theme
+    size: 120,
+    color: 'rgba(255, 215, 0, 0.25)', // Gold color with low opacity to match the portfolio theme
     duration: 800
   });
 

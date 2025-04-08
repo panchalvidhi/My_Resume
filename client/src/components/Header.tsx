@@ -47,11 +47,11 @@ export default function Header() {
           
           {/* Desktop Nav */}
           <nav className="hidden md:block">
-            <ul className="flex space-x-6">
+            <ul className="flex flex-wrap justify-end gap-x-5 gap-y-2">
               <li>
                 <a 
                   href="#profile" 
-                  className={`font-medium transition-colors duration-300 ${
+                  className={`font-medium transition-colors duration-300 text-sm ${
                     scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
                   }`}
                 >
@@ -61,7 +61,7 @@ export default function Header() {
               <li>
                 <a 
                   href="#experience" 
-                  className={`font-medium transition-colors duration-300 ${
+                  className={`font-medium transition-colors duration-300 text-sm ${
                     scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
                   }`}
                 >
@@ -71,7 +71,7 @@ export default function Header() {
               <li>
                 <a 
                   href="#education" 
-                  className={`font-medium transition-colors duration-300 ${
+                  className={`font-medium transition-colors duration-300 text-sm ${
                     scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
                   }`}
                 >
@@ -81,7 +81,7 @@ export default function Header() {
               <li>
                 <a 
                   href="#skills" 
-                  className={`font-medium transition-colors duration-300 ${
+                  className={`font-medium transition-colors duration-300 text-sm ${
                     scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
                   }`}
                 >
@@ -91,7 +91,7 @@ export default function Header() {
               <li>
                 <a 
                   href="#awards" 
-                  className={`font-medium transition-colors duration-300 ${
+                  className={`font-medium transition-colors duration-300 text-sm ${
                     scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
                   }`}
                 >
@@ -101,7 +101,7 @@ export default function Header() {
               <li>
                 <a 
                   href="#certificates" 
-                  className={`font-medium transition-colors duration-300 ${
+                  className={`font-medium transition-colors duration-300 text-sm ${
                     scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
                   }`}
                 >
@@ -112,7 +112,7 @@ export default function Header() {
               <li>
                 <a 
                   href="#projects" 
-                  className={`font-medium transition-colors duration-300 ${
+                  className={`font-medium transition-colors duration-300 text-sm ${
                     scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
                   }`}
                 >
@@ -123,7 +123,7 @@ export default function Header() {
               <li>
                 <a 
                   href="#contact" 
-                  className={`font-medium transition-colors duration-300 ${
+                  className={`font-medium transition-colors duration-300 text-sm ${
                     scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
                   }`}
                 >
