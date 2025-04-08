@@ -5,7 +5,6 @@ import ExperienceSection from "./components/ExperienceSection";
 import EducationSection from "./components/EducationSection";
 import SkillsSection from "./components/SkillsSection";
 import AwardsSection from "./components/AwardsSection";
-import ProjectsSection from "./components/ProjectsSection";
 import CertificatesSection from "./components/CertificatesSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
@@ -57,7 +56,6 @@ function App() {
         <SkillsSection />
         <AwardsSection />
         <CertificatesSection />
-        <ProjectsSection />
         <ContactSection />
       </main>
       <Footer />
