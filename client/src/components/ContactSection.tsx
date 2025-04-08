@@ -81,11 +81,6 @@ export default function ContactSection() {
                 <h4 className="text-indigo-300 font-medium mb-2">Open to Relocation</h4>
                 <p className="text-white/90">Willing to relocate for the right opportunity within India or abroad.</p>
               </div>
-              
-              <div className="p-4 bg-indigo-800/50 rounded-lg border border-indigo-700/30">
-                <h4 className="text-indigo-300 font-medium mb-2">Response Time</h4>
-                <p className="text-white/90">I typically respond to emails and messages within 24-48 hours.</p>
-              </div>
             </div>
           </div>
         </div>
