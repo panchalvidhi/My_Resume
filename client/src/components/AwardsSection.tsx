@@ -66,11 +66,21 @@ export default function AwardsSection() {
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative aspect-square w-full max-w-[300px] overflow-hidden rounded-lg">
-                <img 
-                  src="https://placehold.co/300x300/FFD700/000000?text=🏆+Award+Trophy" 
-                  alt="Employee of the Year Trophy" 
-                  className="w-full h-full object-contain"
-                />
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="1" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  className="w-full h-full object-contain text-amber-400"
+                  style={{ maxHeight: '250px' }}
+                >
+                  <path d="M12 2v8m0 8v4m-8-6h16M6 16a6 6 0 010-12h12a6 6 0 010 12H6z" />
+                  <circle cx="12" cy="10" r="4" fill="currentColor" />
+                  <path d="M8 19l4-4 4 4" fill="currentColor" />
+                </svg>
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full p-4 text-center">
                   <div className="inline-block bg-amber-500 text-gray-900 text-xs font-bold px-2 py-1 rounded">
