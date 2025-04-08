@@ -59,11 +59,6 @@ export default function AwardsSection() {
                 Employee of the Year 2024
               </h3>
               <p className="text-gray-300 flex items-center">
-                <img
-                  src="/assets/award-trophy.jpg"
-                  alt="Award Trophy"
-                  className="w-6 h-6 mr-2"
-                />
                 Innodel Technologies
               </p>
             </div>
@@ -95,7 +90,7 @@ export default function AwardsSection() {
               <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative aspect-square w-full max-w-[300px] overflow-hidden rounded-lg">
                 <img
-                  src="/assets/award-trophy.jpg"
+                  src="https://media.licdn.com/dms/image/v2/D562DAQHmtaOOvPqsNg/profile-treasury-image-shrink_1280_1280/B56ZTy9zcYHQAU-/0/1739243130276?e=1744722000&v=beta&t=BYZwx4aYUSthZT9MWenpn4TuL9wAinh-FGNd3eAGT_8"
                   alt="Employee of the Year Trophy - Vidhi Panchal"
                   className="w-full h-full object-contain"
                   style={{ maxHeight: "300px" }}
