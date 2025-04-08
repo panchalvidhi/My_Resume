@@ -70,22 +70,32 @@ export default function Header() {
               </li>
               <li>
                 <a 
-                  href="#education" 
-                  className={`font-medium transition-colors duration-300 text-sm ${
-                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
-                  }`}
-                >
-                  Education
-                </a>
-              </li>
-              <li>
-                <a 
                   href="#skills" 
                   className={`font-medium transition-colors duration-300 text-sm ${
                     scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
                   }`}
                 >
                   Skills
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#projects" 
+                  className={`font-medium transition-colors duration-300 text-sm ${
+                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
+                  }`}
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#education" 
+                  className={`font-medium transition-colors duration-300 text-sm ${
+                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
+                  }`}
+                >
+                  Education
                 </a>
               </li>
               <li>
@@ -108,18 +118,6 @@ export default function Header() {
                   Certificates
                 </a>
               </li>
-              
-              <li>
-                <a 
-                  href="#projects" 
-                  className={`font-medium transition-colors duration-300 text-sm ${
-                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
-                  }`}
-                >
-                  Projects
-                </a>
-              </li>
-
               <li>
                 <a 
                   href="#contact" 
@@ -172,20 +170,29 @@ export default function Header() {
             </li>
             <li>
               <a 
-                href="#education" 
-                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
-                onClick={closeMobileMenu}
-              >
-                Education
-              </a>
-            </li>
-            <li>
-              <a 
                 href="#skills" 
                 className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
                 onClick={closeMobileMenu}
               >
                 Skills
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#projects" 
+                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
+                onClick={closeMobileMenu}
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#education" 
+                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
+                onClick={closeMobileMenu}
+              >
+                Education
               </a>
             </li>
             <li>
@@ -206,17 +213,6 @@ export default function Header() {
                 Certificates
               </a>
             </li>
-            
-            <li>
-              <a 
-                href="#projects" 
-                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
-                onClick={closeMobileMenu}
-              >
-                Projects
-              </a>
-            </li>
-
             <li>
               <a 
                 href="#contact" 
