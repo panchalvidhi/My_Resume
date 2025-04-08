@@ -60,6 +60,83 @@ export default function CertificatesSection() {
     },
     {
       id: 4,
+      title: "The Fundamentals of Digital Marketing",
+      organization: "Google Digital Garage",
+      date: "February 2024",
+      skills: ["Digital Marketing", "SEO", "Analytics", "Content Strategy", "Social Media"]
+    },
+    {
+      id: 5,
+      title: "Agile Scrum Master",
+      organization: "Simplilearn",
+      date: "November 2023",
+      skills: ["Agile Methodology", "Scrum", "Sprint Planning", "Retrospectives"]
+    },
+    {
+      id: 6,
+      title: "Automation Framework Development using Selenium",
+      organization: "Unicode Technologies HR",
+      date: "November 2023",
+      skills: ["Selenium", "Test Automation", "Java", "TestNG", "Framework Design"]
+    },
+    {
+      id: 7,
+      title: "Human Resource Management",
+      organization: "Great Learning",
+      date: "December 2023",
+      skills: ["HR Management", "Talent Acquisition", "Employee Relations", "Performance Management"]
+    },
+    {
+      id: 8,
+      title: "Introduction to Amazon Elastic Compute Cloud (EC2)",
+      organization: "AWS Training Online",
+      date: "December 2023",
+      skills: ["AWS", "EC2", "Cloud Computing", "Instance Management", "Scaling"]
+    },
+    {
+      id: 9,
+      title: "Manual and Automation Testing",
+      organization: "Unicode Technologies HR",
+      date: "November 2023",
+      skills: ["Manual Testing", "Test Cases", "Automation Testing", "QA"]
+    },
+    {
+      id: 10,
+      title: "Operating System",
+      organization: "NPTEL",
+      date: "January 2024",
+      skills: ["OS Concepts", "Process Management", "Memory Management", "File Systems"]
+    },
+    {
+      id: 11,
+      title: "Programming in Java",
+      organization: "NPTEL",
+      date: "January 2024",
+      skills: ["Java", "OOP", "Data Structures", "Collections", "Multithreading"]
+    },
+    {
+      id: 12,
+      title: "Environmental Engineering and Artificial Intelligence",
+      organization: "Udemy Free Courses",
+      date: "November 2023",
+      skills: ["Environmental Engineering", "AI Applications", "Sustainability"]
+    },
+    {
+      id: 13,
+      title: "Elementary Drawing Grade Examination",
+      organization: "State Examination Board Gujarat",
+      date: "December 2023",
+      skills: ["Drawing Fundamentals", "Sketching", "Art Techniques"]
+    },
+    {
+      id: 14,
+      title: "Intermediate Drawing Grade Examination",
+      organization: "State Examination Board Gujarat",
+      date: "December 2023",
+      skills: ["Advanced Drawing", "Composition", "Visual Arts"]
+    },
+    {
+      id: 15,
       title: "Web Development with HTML, CSS, JavaScript",
       organization: "Udemy",
       date: "October 2022",
@@ -78,30 +155,37 @@ export default function CertificatesSection() {
         Certifications
       </h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {certificates.map((cert) => (
           <div 
             key={cert.id} 
-            className="certificate-card bg-gradient-to-br from-slate-800 to-slate-900 p-5 rounded-lg shadow-lg border border-purple-400/30 hover:border-purple-400/70 transition-all duration-300 transform hover:-translate-y-1"
+            className="certificate-card bg-gradient-to-br from-slate-800 to-slate-900 p-4 rounded-lg shadow-lg border border-purple-400/30 hover:border-purple-400/70 transition-all duration-300 transform hover:-translate-y-1"
           >
             <div className="flex flex-col h-full">
-              <div className="mb-3">
-                <div className="flex justify-between items-start">
-                  <h3 className="text-xl font-semibold text-white mb-1">{cert.title}</h3>
-                  <span className="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-200 font-medium">{cert.date}</span>
+              <div className="mb-2">
+                <div className="flex flex-col">
+                  <div className="flex justify-between items-start mb-1">
+                    <h3 className="text-base font-semibold text-white">{cert.title}</h3>
+                    <span className="text-xs px-2 py-0.5 rounded bg-purple-500/20 text-purple-200 font-medium ml-1 whitespace-nowrap">{cert.date}</span>
+                  </div>
+                  <p className="text-purple-300 font-medium text-sm">{cert.organization}</p>
                 </div>
-                <p className="text-purple-300 font-medium">{cert.organization}</p>
               </div>
               
-              <div className="flex flex-wrap gap-2 mt-2 mb-4">
-                {cert.skills.map((skill, index) => (
+              <div className="flex flex-wrap gap-1 mt-2 mb-3">
+                {cert.skills.slice(0, 4).map((skill, index) => (
                   <span 
                     key={index} 
-                    className="text-xs px-2 py-1 rounded-full bg-slate-700 text-slate-300"
+                    className="text-xs px-2 py-0.5 rounded-full bg-slate-700 text-slate-300"
                   >
                     {skill}
                   </span>
                 ))}
+                {cert.skills.length > 4 && (
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-slate-700 text-slate-300">
+                    +{cert.skills.length - 4} more
+                  </span>
+                )}
               </div>
               
               <div className="mt-auto pt-2 border-t border-slate-700">
@@ -110,15 +194,15 @@ export default function CertificatesSection() {
                     href={cert.credentialUrl} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="text-sm text-purple-400 hover:text-purple-300 flex items-center transition-colors"
+                    className="text-xs text-purple-400 hover:text-purple-300 flex items-center transition-colors"
                   >
                     <span>View Credential</span> 
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
                 ) : (
-                  <span className="text-sm text-gray-500 italic">Credential not available online</span>
+                  <span className="text-xs text-gray-500 italic">Credential not available online</span>
                 )}
               </div>
             </div>
