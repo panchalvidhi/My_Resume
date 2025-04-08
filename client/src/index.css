@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased bg-white text-gray-900;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Make sure elements can properly contain the ripple effect */
+  a, button {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Define ripple animation */
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+}
+
+@layer components {
+  .timeline-item {
+    @apply relative pl-6;
+  }
+
+  .timeline-item::before {
+    content: '';
+    @apply absolute left-0 top-3 h-3.5 w-3.5 rounded-full bg-primary -translate-x-1/2;
+  }
+
+  .timeline-item::after {
+    content: '';
+    @apply absolute left-0 top-6 bottom-[-1rem] w-0.5 bg-gray-200 -translate-x-1/2;
+  }
+
+  .timeline-item:last-child::after {
+    @apply hidden;
+  }
+  
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+  
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .btn {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-md transition-colors duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-secondary text-white;
+  }
+  
+  .btn-outline {
+    @apply border border-primary hover:bg-accent text-primary;
+  }
+  
+  .skill-tag {
+    @apply bg-accent text-primary px-3 py-1 rounded-full text-sm;
+  }
+  
+  .section {
+    @apply mb-16;
+  }
+  
+  .section-title {
+    @apply text-2xl font-semibold mb-6 pb-2 border-b border-gray-200;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    color: black;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .section {
+    margin-bottom: 1rem;
+    page-break-inside: avoid;
+  }
+}
