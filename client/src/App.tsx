@@ -6,6 +6,7 @@ import EducationSection from "./components/EducationSection";
 import SkillsSection from "./components/SkillsSection";
 import AwardsSection from "./components/AwardsSection";
 import CertificatesSection from "./components/CertificatesSection";
+import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import useClickAnimation from "./hooks/useClickAnimation";
@@ -56,6 +57,7 @@ function App() {
         <SkillsSection />
         <AwardsSection />
         <CertificatesSection />
+        <ProjectsSection />
         <ContactSection />
       </main>
       <Footer />
