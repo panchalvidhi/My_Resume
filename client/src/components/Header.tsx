@@ -108,6 +108,17 @@ export default function Header() {
                   Certificates
                 </a>
               </li>
+              
+              <li>
+                <a 
+                  href="#projects" 
+                  className={`font-medium transition-colors duration-300 ${
+                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
+                  }`}
+                >
+                  Projects
+                </a>
+              </li>
 
               <li>
                 <a 
@@ -193,6 +204,16 @@ export default function Header() {
                 onClick={closeMobileMenu}
               >
                 Certificates
+              </a>
+            </li>
+            
+            <li>
+              <a 
+                href="#projects" 
+                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
+                onClick={closeMobileMenu}
+              >
+                Projects
               </a>
             </li>
 
