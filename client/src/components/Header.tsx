@@ -1,7 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Detect scroll position for navbar styling
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -12,16 +28,32 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed w-full bg-white shadow-sm z-50 no-print">
+    <header className={`fixed w-full z-50 no-print transition-all duration-300 ${
+      scrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <h1 className="text-xl font-semibold text-primary">Vidhi Panchal</h1>
+          {/* Logo */}
+          <div className="flex items-center">
+            <div className={`w-8 h-8 rounded-md overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600 mr-2 flex items-center justify-center text-white font-bold ${
+              scrolled ? 'opacity-100' : 'opacity-90'
+            }`}>
+              VP
+            </div>
+            <h1 className={`text-xl font-bold ${scrolled ? 'text-white' : 'text-blue-300'}`}>
+              Vidhi Panchal
+            </h1>
+          </div>
+          
+          {/* Desktop Nav */}
           <nav className="hidden md:block">
-            <ul className="flex space-x-8">
+            <ul className="flex space-x-6">
               <li>
                 <a 
                   href="#profile" 
-                  className="text-gray-900 hover:text-primary transition-colors duration-300"
+                  className={`font-medium transition-colors duration-300 ${
+                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
+                  }`}
                 >
                   Profile
                 </a>
@@ -29,7 +61,9 @@ export default function Header() {
               <li>
                 <a 
                   href="#experience" 
-                  className="text-gray-900 hover:text-primary transition-colors duration-300"
+                  className={`font-medium transition-colors duration-300 ${
+                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
+                  }`}
                 >
                   Experience
                 </a>
@@ -37,7 +71,9 @@ export default function Header() {
               <li>
                 <a 
                   href="#education" 
-                  className="text-gray-900 hover:text-primary transition-colors duration-300"
+                  className={`font-medium transition-colors duration-300 ${
+                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
+                  }`}
                 >
                   Education
                 </a>
@@ -45,24 +81,63 @@ export default function Header() {
               <li>
                 <a 
                   href="#skills" 
-                  className="text-gray-900 hover:text-primary transition-colors duration-300"
+                  className={`font-medium transition-colors duration-300 ${
+                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
+                  }`}
                 >
                   Skills
                 </a>
               </li>
               <li>
                 <a 
+                  href="#awards" 
+                  className={`font-medium transition-colors duration-300 ${
+                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
+                  }`}
+                >
+                  Awards
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#certificates" 
+                  className={`font-medium transition-colors duration-300 ${
+                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
+                  }`}
+                >
+                  Certificates
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#projects" 
+                  className={`font-medium transition-colors duration-300 ${
+                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
+                  }`}
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a 
                   href="#contact" 
-                  className="text-gray-900 hover:text-primary transition-colors duration-300"
+                  className={`font-medium transition-colors duration-300 ${
+                    scrolled ? 'text-gray-300 hover:text-white' : 'text-gray-200 hover:text-white'
+                  }`}
                 >
                   Contact
                 </a>
               </li>
             </ul>
           </nav>
+          
+          {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-900 focus:outline-none" 
+            className={`md:hidden focus:outline-none ${
+              scrolled ? 'text-white' : 'text-gray-200'
+            }`}
             onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -71,12 +146,14 @@ export default function Header() {
         </div>
         
         {/* Mobile menu */}
-        <div className={`md:hidden pb-4 ${isMobileMenuOpen ? '' : 'hidden'}`}>
-          <ul className="space-y-2">
+        <div className={`md:hidden pb-4 overflow-hidden transition-all duration-300 ${
+          isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <ul className="space-y-2 py-2">
             <li>
               <a 
                 href="#profile" 
-                className="block py-2 text-gray-900 hover:text-primary transition-colors duration-300"
+                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
                 onClick={closeMobileMenu}
               >
                 Profile
@@ -85,7 +162,7 @@ export default function Header() {
             <li>
               <a 
                 href="#experience" 
-                className="block py-2 text-gray-900 hover:text-primary transition-colors duration-300"
+                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
                 onClick={closeMobileMenu}
               >
                 Experience
@@ -94,7 +171,7 @@ export default function Header() {
             <li>
               <a 
                 href="#education" 
-                className="block py-2 text-gray-900 hover:text-primary transition-colors duration-300"
+                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
                 onClick={closeMobileMenu}
               >
                 Education
@@ -103,7 +180,7 @@ export default function Header() {
             <li>
               <a 
                 href="#skills" 
-                className="block py-2 text-gray-900 hover:text-primary transition-colors duration-300"
+                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
                 onClick={closeMobileMenu}
               >
                 Skills
@@ -111,8 +188,35 @@ export default function Header() {
             </li>
             <li>
               <a 
+                href="#awards" 
+                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
+                onClick={closeMobileMenu}
+              >
+                Awards
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#certificates" 
+                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
+                onClick={closeMobileMenu}
+              >
+                Certificates
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#projects" 
+                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
+                onClick={closeMobileMenu}
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <a 
                 href="#contact" 
-                className="block py-2 text-gray-900 hover:text-primary transition-colors duration-300"
+                className="block py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-300"
                 onClick={closeMobileMenu}
               >
                 Contact
